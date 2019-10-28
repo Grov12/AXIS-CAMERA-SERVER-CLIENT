@@ -71,8 +71,8 @@ void *server(void *vargp) {
 	memset(&serverAddr, '\0',sizeof(serverAddr));
 
 	serverAddr.sin_family =AF_INET;
-	serverAddr.sin_port =htons(7985);
-	serverAddr.sin_addr.s_addr = inet_addr("192.168.20.252");
+	serverAddr.sin_port =htons(PORT);
+	serverAddr.sin_addr.s_addr = inet_addr(IP);
 	
     	bind(sockfd, (struct sockaddr*)&serverAddr, sizeof(serverAddr));
 
